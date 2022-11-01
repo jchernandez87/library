@@ -7,9 +7,8 @@ import { Home } from './pages';
 function App() {
   const [ books, setBooks ] = useState([])
 
-
   const fetchBooks = () => {
-    fetch('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyDwJseSxIeRqBwiR0x0bvCZz2dceESdO7E')
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=${process.env.REACT_APP_API_KEY}`)
     .then(res => res.json())
     .then(data => setBooks(data.items))
   }
