@@ -10,15 +10,12 @@ const NavBar = () => {
 
   const DropMenu = () => (
     <ul className={`flex flex-col w-100 items-start p-6 bg-orange-200`}>
-      <li className="text-md text-gray-600 font-semibold border-b border-gray-600">
+      <Link to="/" className="text-md text-gray-600 font-semibold border-b border-gray-600">
         Home
-      </li>
-      <li className="text-md text-gray-600 font-semibold border-b border-gray-600 mt-4">
-        Favorites
-      </li>
-      <li className="text-md text-gray-600 font-semibold border-b border-gray-600 mt-4">
-        Favorites
-      </li>
+      </Link>
+      <Link to="/books" className="text-md text-gray-600 font-semibold border-b border-gray-600 mt-4">
+        Books
+      </Link>
     </ul>
   );
 
