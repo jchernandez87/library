@@ -14,9 +14,11 @@ const Books = ({ books }) => {
   ));
 
   return (
-    <div className='p-6 bg-gray-100 h-[calc(100%-116px)] overflow-auto flex flex-col items-center'>
-      <h1 className='font-bold text-gray-800 text-lg mb-4'>Showing Results:</h1>
-      {currentBooks}
+    <div className="h-[calc(100%-116px)] overflow-y-auto">
+      <h1 className='text-center font-bold text-gray-800 text-lg pt-6 bg-gray-100'>Showing Results:</h1>
+      <div className='p-6 bg-gray-100 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'>
+        {currentBooks}
+      </div>
     </div>
   )
 };
