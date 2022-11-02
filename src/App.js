@@ -11,7 +11,7 @@ function App() {
     e.preventDefault()
 
     fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=harry+intitle:${terms}&key=${process.env.REACT_APP_API_KEY}`
+      `https://www.googleapis.com/books/v1/volumes?q=${terms}&key=${process.env.REACT_APP_API_KEY}`
     )
       .then((res) => res.json())
       .then((data) => {

@@ -1,13 +1,12 @@
-import { GiBlackBook } from 'react-icons/gi';
 import { BookCard } from '../components';
 
 const Books = ({ books }) => {
   const currentBooks = books.map((book) => (
     <BookCard 
       key={book.id} 
-      cover={book.volumeInfo.imageLinks.thumbnail} 
-      title={book.volumeInfo.title} 
-      author={book.volumeInfo.authors[0]} 
+      title={book.volumeInfo.title}
+      author={book.volumeInfo.authors !== undefined ? book.volumeInfo.authors[0] : "Author not available"} 
+      cover={book.volumeInfo.imageLinks !== undefined ? book.volumeInfo.imageLinks.thumbnail : "https://muskersbroughtonhall.com.au/wp-content/plugins/ninja-forms/assets/img/no-image-available-icon-6.jpg"}
     />
   ));
 
