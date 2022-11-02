@@ -1,7 +1,12 @@
-import { useState } from 'react';
+import { useState,useEffect, useRef } from 'react';
 import { BsSearch } from 'react-icons/bs'
 
 const Home = ({ handleSubmit }) => {
+  const focusRef = useRef(null)
+
+  useEffect(() => {
+    focusRef.current.focus()
+  },[])
   
   const SearchBar = () => {
     const [ search, setSearch ] = useState("")
@@ -14,7 +19,8 @@ const Home = ({ handleSubmit }) => {
       <form className='flex flex-row items-center' onSubmit={(e) => handleSubmit(e, search)}>
         <BsSearch className="absolute ml-2 text-gray-800 text-lg" />
         <input
-          className="h-10 w-80 shadow-md rounded-lg pl-8"
+          ref={focusRef}
+          className="h-10 w-80 shadow-md rounded-lg pl-8 focus:outline-none"
           placeholder='Type your search'
           type="text"
           name="search"
