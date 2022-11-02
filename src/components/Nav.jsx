@@ -20,7 +20,7 @@ const NavBar = () => {
   );
 
   return (
-    <nav className="bg-orange-400 shadow-lg">
+    <nav className="bg-orange-400 shadow-lg sticky top-0">
       <div className="flex flex-row p-4 items-center justify-between">
         <div className="flex flex-row items-center">
           <GiOpenBook className="text-gray-800 text-xl" />

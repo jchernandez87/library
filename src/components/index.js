@@ -1,4 +1,9 @@
-import NavBar from './Nav';
-import BookCard from './BookCard';
+import NavBar from "./Nav";
+import BookCard from "./BookCard";
+import Footer from "./Footer";
 
-export { NavBar, BookCard };
+export { 
+  NavBar, 
+  BookCard, 
+  Footer
+};
