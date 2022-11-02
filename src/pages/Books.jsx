@@ -1,12 +1,15 @@
 import { BookCard } from '../components';
 
 const Books = ({ books }) => {
-  const currentBooks = books.map((book) => (
+  const filteredBooks = books.filter(book => book.volumeInfo.authors && book.volumeInfo.imageLinks)
+
+
+  const currentBooks = filteredBooks.map((book) => (
     <BookCard 
       key={book.id} 
       title={book.volumeInfo.title}
-      author={book.volumeInfo.authors !== undefined ? book.volumeInfo.authors[0] : "Author not available"} 
-      cover={book.volumeInfo.imageLinks !== undefined ? book.volumeInfo.imageLinks.thumbnail : "https://muskersbroughtonhall.com.au/wp-content/plugins/ninja-forms/assets/img/no-image-available-icon-6.jpg"}
+      author={book.volumeInfo.authors[0]} 
+      cover={book.volumeInfo.imageLinks.thumbnail}
     />
   ));
 
