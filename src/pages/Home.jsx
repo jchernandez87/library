@@ -32,7 +32,7 @@ const Home = ({ handleSubmit }) => {
   }
 
   return (
-    <div className="h-[calc(100%-116px)] bg-gradient-to-r from-orange-200 to-orange-100 flex flex-col justify-start pt-40 items-center">
+    <div className="h-[calc(100%-116px)] bg-gradient-to-r from-orange-300 to-orange-100 flex flex-col justify-start pt-40 items-center">
       <div className="w-80">
         <h1 className="text-[32px] font-bold leading-tight mb-2">Welcome to my library App. </h1>
         <p className="font-bold text-xl mb-8">Type some terms to search for a collection of books from the google books API</p>
